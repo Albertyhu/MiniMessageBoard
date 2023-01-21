@@ -4,7 +4,13 @@ module.exports = {
         "./views/**/*.{html, js, ejs}",
     ],
   theme: {
-    extend: {},
+      extend: {
+          colors: {
+              'Panel-BG': 'rgba(199, 255, 218, 1)', 
+              'CancelButton-Color': '#E8E1EF',
+              'NewMsgButtonColor': "#C4F4C7", 
+          }
+      },
   },
     plugins: [{
         tailwindcss: {},

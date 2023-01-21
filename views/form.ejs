@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mini Message Board</title>
+  <link href="style/mystyle.css" rel="stylesheet" />
+  <link href="/output.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <h1 class="text-5xl font-bold text-center mt-10">
+    <%= title %>
+  </h1>
+    <div 
+      id = "MessageBoard"
+      class = "w-11/12 mx-auto m-3 rounded-md" >
+    <div 
+        id = "Shell"
+        class = "w-11/12 mx-auto m-10">
+        <form action = '/' method = "POST" class = "grid">
+            <label 
+                for='messageText'
+                class = "text-5xl center mt-10"
+            >New Message</label>
+            <input 
+             type = 'text'
+             placeholder = "Type your new message here"
+             name="messageText"
+             required='true'
+             class = "text-4xl my-5 border border-black p-5"
+            />
+             <label 
+                for='username'
+                class = "text-5xl center mt-10"
+             >Your username</label>
+             <input 
+                 type = 'text'
+                 placeholder = "Type your username here"
+                 name="username"
+                 required='true'
+                 class = "text-4xl my-5 border border-black p-5"
+            />
+            <div class = "flex mt-5">            
+                <button 
+                    type = "submit"
+                    class = "bg-blue-300 rounded-2xl p-5 text-4xl w-max text-white mx-auto cursor-pointer"
+                >Submit</submit>
+                <button 
+                    class = "bg-[#E8E1EF] rounded-2xl p-5 text-4xl w-max text-black mx-auto cursor-pointer"
+                ><a href = "/"
+                    class = "text-black"
+                    >Cancel</a></submit>    
+            </div>
+        </form>
+    </div>
+    <% if(error) {%>
+        <ul>
+            <% error.forEach(item =>{ %> 
+                <li><%= item.msg %></li>
+            <%})%>
+        </ul>
+    <%} else {}%>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>
+  </script>
+  <%- include('partial/footer') %>
+</body>
+</html>

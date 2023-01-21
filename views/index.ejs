@@ -4,14 +4,39 @@
   <meta charset="utf-8">
   <title>Mini Message Board</title>
   <link href="style/mystyle.css" rel="stylesheet" />
-
+  <link href="/output.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline text-center sample">
+  <h1 class="text-5xl font-bold text-center ">
     <%= title %>
   </h1>
+  <div
+    onclick="location.href='/new'"
+    class = "bg-[#C4F4C7] p-5 text-black rounded-xl mx-auto w-max text-4xl my-10"
+  >
+    Send a message
+  </div>
+    <div 
+      id = "MessageBoard"
+      class = "w-11/12 mx-auto m-3 rounded-md" >
+    <div 
+        id = "Shell"
+        class = "w-11/12 mx-auto m-10">
+        <% if(typeof messages != 'undefined'){%>
+            <% messages.forEach(item =>{ %> 
+                <div class = "my-32 Panel-BG text-5xl rounded-md bg-gray-300 p-5">
+                    <p class ="font-bold text-6xl" ><%= item.text %></p>
+                    <p class = "italic"><%= item.user %></p>
+                    <p class = "text-gray-500"><%= item.added %></p>
+                </div>
+            <%})%>
+        <% } else {} %>
+    </div>
+  </div>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script>
   </script>
+  <%- include('partial/footer') %>
 </body>
 </html>

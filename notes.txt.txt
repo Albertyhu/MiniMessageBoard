@@ -1,3 +1,8 @@
+1/20/23
+The only way I found to make Tailwind CSS work is to inject the following tag onto the view files.
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
 1/19/23
 Installed express-generator
 

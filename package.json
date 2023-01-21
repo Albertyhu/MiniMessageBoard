@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www"
+    "devstart": "npm run watch:css && nodemon ./bin/www",
+    "watch:css": "postcss public/style/tailwind.css -o dist/output.css"
   },
   "tailwind:css": "postcss public/style/tailwind.css -o public/style/mystyle.css",
   "dependencies": {
