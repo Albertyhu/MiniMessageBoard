@@ -24,7 +24,7 @@ exports.form_post = [
             user: req.body.username,
             added: new Date(),
         }
-        const error = validation(Result);
+        const error = validationResult(req);
         if (!error.isEmpty()) {
             res.render('form', {
                 title: "Create a new message",
@@ -34,10 +34,11 @@ exports.form_post = [
         }
         try {
             messages.push(newMessage)
-            res.redirect("/")
+            res.redirect("/");
         } catch (error) {
             console.log(`Error in posting: ${error}`)
             alert(`Error in posting: ${error}`)
+            return next(error)
         }
    
     }

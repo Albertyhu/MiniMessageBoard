@@ -1,10 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\controller",
+    "\\public",
+    "\\public\\javascripts",
     "\\public\\style",
     "\\routes",
-    "\\views"
+    "\\views",
+    "\\views\\partial"
   ],
-  "SelectedNode": "\\controller",
+  "SelectedNode": "\\controller\\formController.js",
   "PreviewInSolutionExplorer": false
 }
