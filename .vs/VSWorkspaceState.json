@@ -9,6 +9,6 @@
     "\\views",
     "\\views\\partial"
   ],
-  "SelectedNode": "\\controller\\formController.js",
+  "SelectedNode": "\\views\\partial\\footer.ejs",
   "PreviewInSolutionExplorer": false
 }

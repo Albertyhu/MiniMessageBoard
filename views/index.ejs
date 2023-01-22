@@ -8,27 +8,29 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1 class="text-5xl font-bold text-center ">
+  <h1 class="text-5xl font-bold text-center sm:text-3xl">
     <%= title %>
   </h1>
   <div
     onclick="location.href='/new'"
-    class = "bg-[#C4F4C7] p-5 text-black rounded-xl mx-auto w-max text-4xl my-10"
+    class = "bg-[#C4F4C7] p-5 text-black rounded-xl mx-auto 
+    w-max text-4xl my-10 cursor-pointer active:translate-x-1 active:translate-y-1 shadow-2xl
+    sm:text-lg sm:p-2"
   >
     Send a message
   </div>
     <div 
       id = "MessageBoard"
-      class = "w-11/12 mx-auto m-3 rounded-md" >
+      class = "w-11/12 mx-auto m-3 rounded-md sm:max-w-[600px] mx-auto" >
     <div 
         id = "Shell"
         class = "w-11/12 mx-auto m-10">
         <% if(typeof messages != 'undefined'){%>
             <% messages.forEach(item =>{ %> 
-                <div class = "my-32 Panel-BG text-5xl rounded-md bg-gray-300 p-5">
-                    <p class ="font-bold text-6xl" ><%= item.text %></p>
-                    <p class = "italic"><%= item.user %></p>
-                    <p class = "text-gray-500"><%= item.added %></p>
+                <div class = "my-32 Panel-BG text-5xl rounded-md bg-gray-300 p-5 sm:my-10">
+                    <p class ="font-bold text-6xl sm:text-2xl" ><%= item.text %></p>
+                    <p class = "italic sm:text-2xl"><%= item.user %></p>
+                    <p class = "text-gray-500 sm:text-2xl"><%= item.added %></p>
                 </div>
             <%})%>
         <% } else {} %>
