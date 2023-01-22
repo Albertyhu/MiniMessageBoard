@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src",
+    "start": "node ./bin/www",
     "devstart": "npm run watch:css && nodemon ./bin/www",
     "watch:css": "postcss public/style/tailwind.css -o dist/output.css"
   },
