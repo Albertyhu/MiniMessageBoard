@@ -12,10 +12,11 @@
     <%= title %>
   </h1>
   <div
+    id="SendMessageButton"
     onclick="location.href='/new'"
     class = "bg-[#C4F4C7] p-5 text-black rounded-xl mx-auto 
     w-max text-4xl my-10 cursor-pointer active:translate-x-1 active:translate-y-1 shadow-2xl
-    sm:text-lg sm:p-2"
+    sm:text-lg sm:p-2 box-shadow"
   >
     Send a message
   </div>
@@ -39,6 +40,5 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script>
   </script>
-  <%- include('partial/footer') %>
 </body>
 </html>

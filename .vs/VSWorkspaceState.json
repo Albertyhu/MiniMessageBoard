@@ -1,14 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\controller",
+    "\\dist",
+    "\\Local settings (.vs)",
     "\\public",
     "\\public\\javascripts",
     "\\public\\style",
     "\\routes",
+    "\\src",
     "\\views",
     "\\views\\partial"
   ],
-  "SelectedNode": "\\views\\partial\\footer.ejs",
+  "SelectedNode": "\\notes.txt.txt",
   "PreviewInSolutionExplorer": false
 }
